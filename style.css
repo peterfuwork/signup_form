@@ -1,0 +1,112 @@
+
+.form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 1em;
+}
+
+.form-wrapper #testing-form {
+    display: inline-block;
+    text-align:left;
+}
+@media(max-width:767px) {
+    .form-wrapper #testing-form {
+        width: 100%;
+    }
+}
+
+input {
+    margin: .4rem 0;
+    font-family: "Times New Roman", Times, serif;
+    width: 100%;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: .4rem;
+    width: initial;
+}
+
+input:focus {
+  outline: 0;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+/* Question */
+
+input.textbox{
+  font-size: 24px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+/* Underline and Placeholder */
+
+input.textbox + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 30%;
+  border-top: 1px solid red;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+  position: relative;
+  z-index: 1;
+}
+
+input.textbox:focus + label {
+  width: 100%;
+}
+
+input.textbox:focus,
+input.textbox:valid,
+input.textbox:invalid {
+  padding-top: 32px;
+}
+
+input.textbox:focus + label > span,
+input.textbox:valid + label > span {
+  top: -60px;
+  font-size: 22px;
+  color: #333;
+}
+
+
+input.textbox:valid + label {
+  border-color: green;
+}
+
+input.textbox:invalid{
+  box-shadow: none;
+}
+
+input.textbox + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8F8F8F;
+  font-size: 16px;
+  top: -55px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
